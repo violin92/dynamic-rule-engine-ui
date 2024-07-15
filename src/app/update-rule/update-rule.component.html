@@ -1,0 +1,29 @@
+<!-- update-rule.component.html -->
+<div class="container">
+    <h2>Update Rule</h2>
+    <form (ngSubmit)="updateRule()">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Rule ID</mat-label>
+            <input matInput [(ngModel)]="ruleId" name="ruleId" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="fetchRule()">Fetch Rule</button>
+
+        <div *ngIf="message" class="alert alert-info">{{ message }}</div>
+
+        <div *ngIf="rule">
+            <mat-form-field appearance="fill">
+                <mat-label>Rule Name</mat-label>
+                <input matInput [(ngModel)]="rule.name" name="name" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Rule Condition</mat-label>
+                <input matInput [(ngModel)]="rule.condition" name="condition" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Rule Action</mat-label>
+                <input matInput [(ngModel)]="rule.action" name="action" required>
+            </mat-form-field>
+            <button mat-raised-button color="accent" type="submit">Update Rule</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<!-- create-rule.component.html -->
+<div class="container">
+    <h2>Create Rule</h2>
+    <form (ngSubmit)="createRule()">
+        <mat-form-field appearance="fill">
+            <mat-label>Rule Name</mat-label>
+            <input matInput [(ngModel)]="formData.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Condition</mat-label>
+            <textarea matInput [(ngModel)]="formData.condition" name="condition" rows="5" required></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Action</mat-label>
+            <textarea matInput [(ngModel)]="formData.action" name="action" rows="5" required></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Create Rule</button>
+    </form>
+
+    <div *ngIf="message" class="alert alert-info">{{ message }}</div>
+</div>

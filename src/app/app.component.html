@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+    <span>{{ title }}</span>
+</mat-toolbar>
+
+<div class="menu-container">
+    <mat-nav-list>
+        <a mat-list-item routerLink="/create-rule" routerLinkActive="active-link" matTooltip="Create Rule">
+            <mat-icon matListIcon>add_circle</mat-icon>
+            <span class="menu-text">Create Rule</span>
+        </a>
+        <a mat-list-item routerLink="/retrieve-rules" routerLinkActive="active-link" matTooltip="Retrieve All Rules">
+            <mat-icon matListIcon>list</mat-icon>
+            <span class="menu-text">Retrieve All Rules</span>
+        </a>
+        <a mat-list-item routerLink="/retrieve-rule-by-id" routerLinkActive="active-link" matTooltip="Retrieve Rule by ID">
+            <mat-icon matListIcon>search</mat-icon>
+            <span class="menu-text">Retrieve Rule by ID</span>
+        </a>
+        <a mat-list-item routerLink="/update-rule" routerLinkActive="active-link" matTooltip="Update Rule by ID">
+            <mat-icon matListIcon>edit</mat-icon>
+            <span class="menu-text">Update Rule by ID</span>
+        </a>
+        <a mat-list-item routerLink="/delete-rule" routerLinkActive="active-link" matTooltip="Delete Rule by ID">
+            <mat-icon matListIcon>delete</mat-icon>
+            <span class="menu-text">Delete Rule by ID</span>
+        </a>
+        <a mat-list-item routerLink="/execute-rule" routerLinkActive="active-link" matTooltip="Execute Rule">
+            <mat-icon matListIcon>play_arrow</mat-icon>
+            <span class="menu-text">Execute Rule</span>
+        </a>
+    </mat-nav-list>
+</div>
+
+<div class="router-outlet-container">
+    <router-outlet></router-outlet>
+</div>

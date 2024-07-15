@@ -1,0 +1,42 @@
+/* execute-rule.component.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+.result {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.card {
+    margin-bottom: 20px;
+}

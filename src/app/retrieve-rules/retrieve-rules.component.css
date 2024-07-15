@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto;
+}
+
+.mat-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.mat-elevation-z8 {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-header-cell, mat-cell {
+    padding: 16px;
+    text-align: left;
+}
+
+mat-header-row {
+    background: #3f51b5;
+    color: white;
+}
+
+mat-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}

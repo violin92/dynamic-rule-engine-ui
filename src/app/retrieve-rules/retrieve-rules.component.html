@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>All Rules</h2>
+
+    <mat-table class="mat-elevation-z8" [dataSource]="rules">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let rule"> {{ rule.name }} </mat-cell>
+        </ng-container>
+
+        <!-- Condition Column -->
+        <ng-container matColumnDef="condition">
+            <mat-header-cell *matHeaderCellDef> Condition </mat-header-cell>
+            <mat-cell *matCellDef="let rule"> {{ rule.condition }} </mat-cell>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let rule"> {{ rule.action }} </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let rule; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

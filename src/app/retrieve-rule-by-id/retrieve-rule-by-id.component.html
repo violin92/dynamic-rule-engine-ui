@@ -1,0 +1,22 @@
+<!-- get-rule-by-id.component.html -->
+<div class="container">
+    <h2>Get Rule by ID</h2>
+    <form (ngSubmit)="getRuleById()">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Rule ID</mat-label>
+            <input matInput [(ngModel)]="ruleId" name="ruleId" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Get Rule</button>
+    </form>
+
+    <div *ngIf="message" class="alert alert-info">{{ message }}</div>
+
+    <div *ngIf="rule">
+        <h3>Rule Details</h3>
+        <p><strong>ID:</strong> {{ rule.id }}</p>
+        <p><strong>Name:</strong> {{ rule.name }}</p>
+        <p><strong>Condition:</strong> {{ rule.condition }}</p>
+        <p><strong>Action:</strong> {{ rule.action }}</p>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Execute Rule</h1>
+
+    <form>
+        <div *ngFor="let param of inputParameters; let i = index">
+            <mat-form-field>
+                <mat-label>Key</mat-label>
+                <input matInput [(ngModel)]="param.key" name="key-{{i}}" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Value</mat-label>
+                <input matInput [(ngModel)]="param.value" name="value-{{i}}" required>
+            </mat-form-field>
+
+            <button mat-icon-button color="warn" (click)="removeParameter(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+
+        <button mat-button (click)="addParameter()">Add Parameter</button>
+    </form>
+
+    <div class="execute-container">
+        <button mat-raised-button color="primary" (click)="executeRule()">Execute Rule</button>
+    </div>
+
+    <div class="result-container" *ngIf="result">
+        <div class="result-header">Execution Result:</div>
+        <div class="result-content">
+            <p> {{ result }}</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="message" class="alert alert-info">{{ message }}</div>

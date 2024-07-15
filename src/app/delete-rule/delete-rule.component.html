@@ -1,0 +1,13 @@
+<!-- delete-rule.component.html -->
+<div class="container">
+    <h2>Delete Rule</h2>
+    <form (ngSubmit)="deleteRule()">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Rule ID</mat-label>
+            <input matInput [(ngModel)]="ruleId" name="ruleId" required>
+        </mat-form-field>
+        <button mat-raised-button color="warn" type="submit">Delete Rule</button>
+    </form>
+
+    <div *ngIf="message" class="alert alert-info">{{ message }}</div>
+</div>
